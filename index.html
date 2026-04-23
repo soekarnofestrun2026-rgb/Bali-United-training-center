@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poliponi 2026</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f6fa;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  height: 300px;
+  background: url('https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2') center/cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  color: white;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  margin: -50px 20px 20px;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  background: #eef3ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+  font-size: 18px;
+}
+
+.label {
+  font-size: 13px;
+  color: #888;
+}
+
+.value {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  margin: 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  cursor: pointer;
+  color: #777;
+}
+
+.tab.active {
+  color: #6a00ff;
+  border-bottom: 2px solid #6a00ff;
+  font-weight: bold;
+}
+
+.tab-content {
+  padding: 20px;
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* FLOAT BUTTON */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #6a00ff, #9b00ff);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 60px;
+  padding: 40px 20px;
+  text-align: center;
+  background: #eaeaea;
+  color: #555;
+}
+
+.footer img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.footer small {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Poliponi 2026</h1>
+</div>
+
+<!-- INFO -->
+<div class="card">
+  <div class="info-item">
+    <div class="icon">📅</div>
+    <div>
+      <div class="label">Tanggal</div>
+      <div class="value">04 Juli 2026</div>
+    </div>
+  </div>
+
+  <div class="info-item">
+    <div class="icon">⏰</div>
+    <div>
+      <div class="label">Jam</div>
+      <div class="value">14:00 - 23:00</div>
+    </div>
+  </div>
+
+  <div class="info-item">
+    <div class="icon">📍</div>
+    <div>
+      <div class="label">Lokasi</div>
+      <div class="value">Bali United Training Center</div>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <div class="tab active" onclick="openTab(0)">Deskripsi</div>
+  <div class="tab" onclick="openTab(1)">Syarat & Ketentuan</div>
+</div>
+
+<div class="tab-content active">
+  <h3>Tentang Event</h3>
+  <p>
+    <b>POLIPONI</b> adalah konser yang memberikan pengalaman terbaik dalam mengapresiasi pertunjukan musik.
+    Di bawah naungan <b>LETRALIVE</b>, untuk pertama kalinya POLIPONI akan diselenggarakan di Malang,
+    pada <b>04 Juli 2026</b>.
+  </p>
+  <p>
+    Akan menghadirkan musisi/artis populer Indonesia yang siap memberikan pengalaman tak terlupakan.
+  </p>
+</div>
+
+<div class="tab-content">
+  <ul>
+    <li>E-Ticket yang valid adalah yang dibeli melalui saluran resmi.</li>
+    <li>Satu tiket hanya untuk satu orang.</li>
+    <li>Wajib membawa identitas resmi.</li>
+    <li>Tiket tidak dapat dikembalikan.</li>
+    <li>Dilarang membawa barang berbahaya.</li>
+    <li>Dilarang membawa alkohol & obat terlarang.</li>
+    <li>Wajib menjaga ketertiban.</li>
+    <li>Penyelenggara berhak menolak pengunjung.</li>
+    <li>Tidak bertanggung jawab atas kehilangan barang.</li>
+    <li>Dengan membeli tiket berarti setuju aturan.</li>
+  </ul>
+</div>
+
+<!-- BUTTON -->
+<button class="floating-btn" onclick="beliTiket()">🎟️ Beli Tiket</button>
+
+<!-- FOOTER -->
+<div class="footer">
+  <img src="https://via.placeholder.com/120x40?text=POLIPONI" alt="logo">
+  <p>@poliponi.id</p>
+  <p>@letralive.official</p>
+  <small>© 2026 Poliponi. Si Paling Konser.</small>
+</div>
+
+<script>
+function openTab(index) {
+  let tabs = document.querySelectorAll(".tab");
+  let contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach((tab, i) => {
+    tab.classList.toggle("active", i === index);
+    contents[i].classList.toggle("active", i === index);
+  });
+}
+
+function beliTiket() {
+  window.location.href = "https://soekarnofestrun2026-rgb.github.io/FINAL-SHEILA-ON7/";
+}
+</script>
+
+</body>
+</html>
